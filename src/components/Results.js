@@ -10,9 +10,9 @@ export default function Results() {
     useEffect(()=>{
         let data = localStorage.getItem("response")
         let final = JSON.parse(data)
-        console.log(final)
+        
         SetResult(final["status"])
-        console.log(result)
+        
         
     },[])
     const ResetGame =()=>{

@@ -15,19 +15,19 @@ export default function Table(props) {
     <tbody>
         <tr>
             <td>1</td>
-            <td>{props.time[1]==NaN?0:props.time[1]}</td>
+            <td>{props.time[1]}</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>{props.time[2]==NaN?0:props.time[2]}</td>
+            <td>{props.time[2]}</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>{props.time[3]==NaN?0:props.time[3]}</td>
+            <td>{props.time[3]}</td>
           </tr>
           <tr>
             <td>4</td>
-            <td>{props.time[4]==NaN?0:props.time[4]}</td>
+            <td>{props.time[4]}</td>
           </tr>
           <tr>
             <td>Total hours</td>

@@ -21,7 +21,7 @@ export default function Form(props) {
   const [prevVehicle, setprevvehicle] = useState(new Map());
   const [planetdis, setplanetdis] = useState(new Object());
   const[time,Settime]=useState(new Object())
-  let[total,setTotal] =useState('')
+  
   let responseData=''
   const history = useHistory();
   useEffect(() => {
@@ -44,11 +44,10 @@ export default function Form(props) {
         );
         const jsonData1 = await response1.json();
         jsonData1.map((item) => {
-          // console.log(typeof(item.name))
+         
           planetdis[item.name] = item.distance;
         });
-        console.log(planetdis);
-        // console.log(planetdis.get('Sapir'))
+       
 
         setplanet(jsonData1);
       } catch (error) {
@@ -72,8 +71,7 @@ export default function Form(props) {
     let n = e.target.value.length;
   
     if (e.target.value[n - 1] == 1) {
-      console.log(selection1);
-      console.log(vehicledist.get(e.target.id))
+      
       time[1]=(planetdis[selection1]/vehicledist.get(e.target.id))
       setSelectedOption1(e.target.id + "1");
       
@@ -94,15 +92,13 @@ export default function Form(props) {
  
     //to decrese vehicle count
     let count = vehicleQty.get(e.target.id);
-    console.log(e.target.name);
-    console.log(e.target.id);
     vehicleQty.set(e.target.id, --count);
     setVehicleQty(new Map(vehicleQty.entries()));
 
     //to increase vehicle count in case of change of selection
     if (prevVehicle.get(JSON.parse(e.target.name))) {
       let count = vehicleQty.get(prevVehicle.get(JSON.parse(e.target.name)));
-      console.log(count);
+      
 
       vehicleQty.set(prevVehicle.get(JSON.parse(e.target.name)), ++count);
       prevVehicle.set(JSON.parse(e.target.name), e.target.id);
@@ -177,7 +173,7 @@ export default function Form(props) {
       "vehicle_names":[selectedOption1.slice(0,-1),selectedOption2.slice(0,-1),selectedOption3.slice(0,-1),selectedOption4.slice(0,-1)]
 
     }
-    console.log(finalData)
+    
     try {
       const url = "https://findfalcone.geektrust.com/find";
       const headers = {
@@ -194,7 +190,7 @@ export default function Form(props) {
     });
 
     responseData = await response.json();
-    console.log(responseData);
+    
   } catch (error) {
     console.error(error);
   }

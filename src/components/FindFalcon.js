@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "./Header";
 import Form from "./Form";
 import { useEffect, useState } from "react";
 import "./FindFalcon.css";
 
 export default function FindFalcon() {
-  console.log("Hiiiiiii");
+ 
   let array = [];
 
   const [vehicle, setvehicle] = useState([]);
@@ -49,7 +48,7 @@ export default function FindFalcon() {
     const getPlanets = (planet) => {
       planet?.forEach((item) => {
         array.push(item?.name);
-        // console.log(array)
+        
       });
     };
     getPlanets(planet);
