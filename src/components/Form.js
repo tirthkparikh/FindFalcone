@@ -209,7 +209,7 @@ export default function Form(props) {
             <label>
               Selection 1:
               <select value={selection1} onChange={handleSelection1Change}>
-                <option value="" disabled>
+                <option value="" >
                   Select an option
                 </option>
                 {data
@@ -255,7 +255,7 @@ export default function Form(props) {
               <label>
                 Selection 2:
                 <select value={selection2} onChange={handleSelection2Change}>
-                  <option value="" disabled>
+                  <option value="" >
                     Select an option
                   </option>
                   {data
@@ -306,7 +306,7 @@ export default function Form(props) {
               <label>
                 Selection 3:
                 <select value={selection3} onChange={handleSelection3Change}>
-                  <option value="" disabled>
+                  <option value="" >
                     Select an option
                   </option>
                   {data
@@ -353,7 +353,7 @@ export default function Form(props) {
             <label>
               Selection 4:
               <select value={selection4} onChange={handleSelection4Change}>
-                <option value="" disabled>
+                <option value="" >
                   Select an option
                 </option>
                 {data
