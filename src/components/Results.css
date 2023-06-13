@@ -1,0 +1,31 @@
+
+
+.reset-button {
+  
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: purple;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom:340px;
+    left: 600px;
+    
+  
+  }
+
+  .text {
+    color: purple;
+  }
+  
+  .success {
+    background-color: green;
+  }
+  
+  .failure {
+    background-color: red;
+  }

@@ -1,0 +1,23 @@
+.vehicle-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+  }
+  
+  
+  img:hover{
+    border-radius: 5px;
+    border: 1px solid red;
+    box-shadow: 0 0 40px rgba(53, 16, 220, 0.5);
+    transition: box-shadow 0.5s;
+    cursor: pointer;
+  }
+  img{
+    border: 1px solid #ccc;
+    height: 25vh;
+  }
+  .vehicle{
+    color:yellowgreen
+  }

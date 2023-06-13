@@ -1,0 +1,24 @@
+.flex-container {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  
+  .flex-item {
+    color: aqua;
+    
+  }
+  img:hover{
+    border: 1px solid red;
+    box-shadow: 0 0 40px rgba(35, 176, 73, 0.5);
+    transition: box-shadow 1s;
+    cursor: pointer;
+  }
+  img{
+    
+    transition: box-shadow 2s;
+    height: 25vh;
+  }

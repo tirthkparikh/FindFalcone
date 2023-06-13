@@ -1,0 +1,18 @@
+.table-container {
+    position: fixed;
+    bottom:40px;
+    left: 0;
+   
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Other table styles */
+  }
+  .table th,
+.table td {
+  border: 1px solid purple;
+  padding: 8px;
+}
+ 
