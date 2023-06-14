@@ -3,10 +3,9 @@ import "../components/FindFalcon.css";
 import Table from "./Table";
 import { useHistory } from "react-router-dom";
 
-export default function Form(props) {
-  const [data, setData] = useState([""]);
+export default function Form() {
+  const [data,setData] =useState([])
   const [vehicle, setvehicle] = useState([]);
-  const [planet, setplanet] = useState([]);
   const [vehicleQty, setVehicleQty] = useState(new Map());
   const [vehicledist, setvehicleDist] = useState(new Map());
   const [vehiclemax, setvehicleMax] = useState(new Map());
@@ -25,7 +24,7 @@ export default function Form(props) {
   let responseData = "";
   const history = useHistory();
   useEffect(() => {
-    setData([...props.props]);
+    
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -36,6 +35,7 @@ export default function Form(props) {
           vehicleQty.set(element.name, element.total_no);
           vehicledist.set(element.name, element.speed);
           vehiclemax.set(element.name, element.max_distance);
+           
         });
         setvehicle(jsonData);
         const response1 = await fetch(
@@ -44,9 +44,11 @@ export default function Form(props) {
         const jsonData1 = await response1.json();
         jsonData1.map((item) => {
           planetdis[item.name] = item.distance;
+          
         });
-
-        setplanet(jsonData1);
+        console.log(jsonData1)
+        const data = jsonData1.map(obj => obj.name)
+        setData(data)
       } catch (error) {
         console.log("Error fetching data:", error);
       }
@@ -55,6 +57,7 @@ export default function Form(props) {
       time[i] = 0;
     }
 
+    
     fetchData();
   }, []);
 
@@ -172,7 +175,7 @@ export default function Form(props) {
         vehicledist.get(selectedOption4.slice(0, -1));
     }
   };
-
+ console.log()
   const sendPostRequest = async () => {
     let finalData = {
       token: localStorage.getItem("token"),
